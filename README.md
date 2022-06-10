@@ -1,0 +1,1 @@
+# pengesan-asap-rokok-berkamera-adtec-taiping
