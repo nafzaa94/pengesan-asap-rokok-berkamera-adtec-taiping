@@ -37,7 +37,7 @@ float SmokeCurve[3] ={2.3,0.53,-0.44};    //two points are taken from the curve.
 float Ro = 10;                            //Ro is initialized to 10 kilo ohms
 
 String Data;
-int Outputdata = 12;
+int Outputdata = 25;
 
 
 void setup()
