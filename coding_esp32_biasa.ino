@@ -39,6 +39,8 @@ float Ro = 10;                            //Ro is initialized to 10 kilo ohms
 String Data;
 int Outputdata = 25;
 
+int state = 0;
+
 
 void setup()
 { 
@@ -76,11 +78,16 @@ void loop()
    Serial.print(iPPM_Smoke);
    Serial.println(" ppm"); 
 
-   if (iPPM_Smoke >= 4000){
+   if (iPPM_Smoke >= 20 && state == 0){
     digitalWrite(Outputdata, HIGH);
     delay(200);
     digitalWrite(Outputdata, LOW);
     bot.sendMessage(CHAT_ID, Data, "");
+    state = 1;
+    }
+
+  else {
+    state = 0;
     }
 
    delay(200);
